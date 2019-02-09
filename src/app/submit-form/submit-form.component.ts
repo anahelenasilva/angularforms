@@ -27,7 +27,7 @@ export class SubmitFormComponent implements OnInit {
   }
 
   async submitHandler() {
-    loading = true;
+    this.loading = true;
 
     const formValue = this.myForm.value;
     try {
