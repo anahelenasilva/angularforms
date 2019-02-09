@@ -1,0 +1,20 @@
+<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+
+    Value: {{ myForm.value | json }}
+  
+    <hr>
+   
+    <mat-form-field>
+      <input matInput placeholder="email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="message" formControlName="message">
+    </mat-form-field>
+
+    <button mat-raised-button [disabled]="myForm.invalid">Let's go</button>
+</form>
+
+<div *ngIf="success" class="notification is-success">
+  Yay! We received your submission
+</div>
